@@ -22,10 +22,15 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
-  font-family: Inter, "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+}
+body, body * {
+  -webkit-text-fill-color: currentColor;
+  text-shadow: 0 0 0.01px currentColor;
 }
 button, input, select, textarea { font: inherit; }
 button:focus-visible, a:focus-visible, summary:focus-visible {
@@ -97,7 +102,7 @@ sup { font-size: 0.62em; line-height: 0; }
   border-left: 1px solid var(--line);
   color: #75847f;
   font-size: 0.63rem;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -121,7 +126,7 @@ sup { font-size: 0.62em; line-height: 0; }
   color: #52645f;
   text-decoration: none;
   font-size: 0.79rem;
-  font-weight: 680;
+  font-weight: 700;
 }
 .desktop-nav a::after {
   content: "";
@@ -140,7 +145,7 @@ sup { font-size: 0.62em; line-height: 0; }
 .resource-pending {
   color: #6b7a76;
   font-size: 0.68rem;
-  font-weight: 760;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: default;
@@ -182,14 +187,14 @@ sup { font-size: 0.62em; line-height: 0; }
 .hero h1 {
   max-width: 1180px;
   margin: 0;
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(3.6rem, 6.8vw, 6.25rem);
-  font-weight: 560;
+  font-weight: 600;
   letter-spacing: -0.058em;
   line-height: 0.92;
 }
 .hero h1 span, .hero h1 em { display: block; }
-.hero h1 em { color: var(--green); font-weight: 520; }
+.hero h1 em { color: var(--green); font-weight: 500; }
 .hero-deck {
   margin-top: 40px;
   display: grid;
@@ -232,7 +237,7 @@ sup { font-size: 0.62em; line-height: 0; }
   gap: 48px;
   align-items: end;
 }
-.authors p { margin: 0; font-size: 0.88rem; font-weight: 690; }
+.authors p { margin: 0; font-size: 0.88rem; font-weight: 700; }
 .authors .affiliations {
   display: flex;
   flex-wrap: wrap;
@@ -252,7 +257,7 @@ sup { font-size: 0.62em; line-height: 0; }
   font-weight: 800;
   letter-spacing: 0.025em;
 }
-.button span { margin-left: 7px; font-size: 0.56rem; font-weight: 650; opacity: 0.65; text-transform: uppercase; }
+.button span { margin-left: 7px; font-size: 0.75rem; font-weight: 600; opacity: 0.65; text-transform: uppercase; }
 .button:disabled { cursor: default; opacity: 1; }
 .button-primary { color: white; background: var(--ink); border: 1px solid var(--ink); }
 .button-secondary { color: var(--ink); background: transparent; border: 1px solid #cdd5d0; }
@@ -267,7 +272,7 @@ sup { font-size: 0.62em; line-height: 0; }
   color: #61726d;
   border-right: 1px solid var(--line);
   font-size: 0.68rem;
-  font-weight: 720;
+  font-weight: 700;
 }
 .species-rail span:last-child { border-right: 0; }
 .species-rail span::before {
@@ -289,16 +294,16 @@ sup { font-size: 0.62em; line-height: 0; }
 .stats-grid strong {
   display: block;
   color: var(--mint);
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.8rem, 2.7vw, 2.5rem);
-  font-weight: 560;
+  font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 1.05;
 }
 .stats-grid span {
   color: #a8b6b1;
   font-size: 0.66rem;
-  font-weight: 680;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -314,9 +319,9 @@ sup { font-size: 0.62em; line-height: 0; }
 .section-heading h2 {
   max-width: 850px;
   margin: 0;
-  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2.35rem, 4.4vw, 4.35rem);
-  font-weight: 560;
+  font-weight: 600;
   letter-spacing: -0.045em;
   line-height: 1;
 }
@@ -351,7 +356,7 @@ sup { font-size: 0.62em; line-height: 0; }
   border: 0;
   border-radius: 7px;
   font-size: 0.75rem;
-  font-weight: 750;
+  font-weight: 700;
   cursor: pointer;
 }
 .species-tabs button:hover { color: var(--ink); background: rgba(255,255,255,.58); }
@@ -364,20 +369,20 @@ sup { font-size: 0.62em; line-height: 0; }
   background: white;
   border-bottom: 1px solid var(--line);
 }
-.context-label { margin: 0 0 8px; color: #788782; font-size: 0.65rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
-.prompt-placeholder { max-width: 720px; margin: 0; font-family: "Iowan Old Style", Georgia, serif; font-size: 1.3rem; font-weight: 560; letter-spacing: -0.012em; line-height: 1.4; }
+.context-label { margin: 0 0 8px; color: #788782; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.prompt-placeholder { max-width: 720px; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.3rem; font-weight: 600; letter-spacing: -0.012em; line-height: 1.4; }
 .sample-context dl { margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; align-self: center; }
 .sample-context dl div { padding-left: 12px; border-left: 2px solid var(--line); }
-.sample-context dt { color: #81908b; font-size: 0.58rem; font-weight: 760; letter-spacing: 0.09em; text-transform: uppercase; }
+.sample-context dt { color: #81908b; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; }
 .sample-context dd { margin: 3px 0 0; font-size: 0.74rem; font-weight: 700; }
 .audio-comparison { display: grid; grid-template-columns: 1fr 1fr; }
 .audio-card { min-width: 0; padding: 30px 34px 32px; background: #fafbf8; }
 .audio-card + .audio-card { border-left: 1px solid var(--line); }
 .proposed-card { background: #eef8f4; }
 .audio-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; }
-.model-code { color: #74857f; font-size: 0.59rem; font-weight: 800; letter-spacing: 0.13em; }
-.audio-card h3 { margin: 5px 0 0; font-size: 1rem; font-weight: 740; }
-.status-chip { flex: none; padding: 4px 8px; color: #6e7e79; background: white; border: 1px solid var(--line); border-radius: 999px; font-size: 0.58rem; font-weight: 750; }
+.model-code { color: #74857f; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.13em; }
+.audio-card h3 { margin: 5px 0 0; font-size: 1rem; font-weight: 700; }
+.status-chip { flex: none; padding: 4px 8px; color: #6e7e79; background: white; border: 1px solid var(--line); border-radius: 999px; font-size: 0.75rem; font-weight: 700; }
 .player-placeholder {
   margin-top: 25px;
   display: grid;
@@ -412,7 +417,7 @@ sup { font-size: 0.62em; line-height: 0; }
   cursor: pointer;
   list-style: none;
   font-size: 0.75rem;
-  font-weight: 750;
+  font-weight: 700;
 }
 .baseline-comparison summary::-webkit-details-marker { display: none; }
 .baseline-comparison summary::before { content: "+"; color: var(--green); font-size: 1.15rem; font-weight: 450; }
@@ -435,7 +440,7 @@ sup { font-size: 0.62em; line-height: 0; }
 .overview-section { border-top: 1px solid var(--line); background: var(--white); }
 .abstract-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 78px; }
 .abstract-copy p { color: #536761; font-size: 0.95rem; }
-.abstract-copy .lead-paragraph { margin-top: 0; color: var(--ink); font-family: "Iowan Old Style", Georgia, serif; font-size: 1.35rem; font-weight: 560; line-height: 1.45; letter-spacing: -0.015em; }
+.abstract-copy .lead-paragraph { margin-top: 0; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; font-weight: 600; line-height: 1.45; letter-spacing: -0.015em; }
 .contribution-list { border-top: 1px solid var(--line); }
 .contribution-list article {
   display: grid;
@@ -477,9 +482,9 @@ sup { font-size: 0.62em; line-height: 0; }
 
 .metric-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 22px; }
 .metric-grid article { padding: 21px; background: #eef2ed; border: 1px solid #dfe5de; border-radius: var(--radius-sm); }
-.metric-grid p { display: flex; justify-content: space-between; gap: 10px; margin: 0; color: #65766f; font-size: 0.67rem; font-weight: 750; text-transform: uppercase; letter-spacing: 0.055em; }
+.metric-grid p { display: flex; justify-content: space-between; gap: 10px; margin: 0; color: #65766f; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.055em; }
 .metric-grid p span { color: var(--green); }
-.metric-grid strong { display: block; margin-top: 17px; font-family: "Iowan Old Style", Georgia, serif; font-size: 2rem; font-weight: 620; letter-spacing: -0.035em; line-height: 1; }
+.metric-grid strong { display: block; margin-top: 17px; font-family: Georgia, "Times New Roman", serif; font-size: 2rem; font-weight: 600; letter-spacing: -0.035em; line-height: 1; }
 .metric-grid small { display: block; margin-top: 7px; color: #7b8b85; font-size: 0.64rem; }
 .results-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(290px, 0.65fr); gap: 22px; }
 .table-card, .conditioning-card { border: 1px solid var(--line); border-radius: var(--radius-md); overflow: hidden; }
@@ -496,7 +501,7 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
 .highlight-row th { color: var(--green-dark); }
 .conditioning-card { padding: 25px; background: var(--ink); color: white; }
 .conditioning-card .card-kicker { color: var(--mint); }
-.conditioning-card h3 { margin: 16px 0 24px; font-family: "Iowan Old Style", Georgia, serif; font-size: 1.55rem; font-weight: 560; line-height: 1.2; letter-spacing: -0.02em; }
+.conditioning-card h3 { margin: 16px 0 24px; font-family: Georgia, "Times New Roman", serif; font-size: 1.55rem; font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; }
 .conditioning-card > p:last-child { color: #a8b8b2; font-size: 0.78rem; }
 .mini-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-bottom: 22px; }
 .mini-comparison div { padding: 13px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 7px; }
@@ -504,7 +509,7 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
 .mini-comparison strong { display: block; margin: 8px 0 3px; font-size: 1.4rem; }
 .embedding-figure { margin-top: 22px; display: grid; grid-template-columns: 0.34fr 0.66fr; padding: 30px; align-items: center; gap: 26px; }
 .embedding-figure .figure-copy { padding-left: 8px; }
-.embedding-figure h3 { margin: 15px 0 12px; font-family: "Iowan Old Style", Georgia, serif; font-size: 1.4rem; font-weight: 560; line-height: 1.25; letter-spacing: -0.02em; }
+.embedding-figure h3 { margin: 15px 0 12px; font-family: Georgia, "Times New Roman", serif; font-size: 1.4rem; font-weight: 600; line-height: 1.25; letter-spacing: -0.02em; }
 .embedding-figure .figure-copy > p:last-child { color: #5f746d; font-size: 0.8rem; }
 .embedding-figure img { max-height: 570px; width: 100%; object-fit: contain; }
 .embedding-figure figcaption { grid-column: 2; margin: 0; }
@@ -521,11 +526,11 @@ tbody tr:last-child th, tbody tr:last-child td { border-bottom: 0; }
 .citation-section { color: white; background: #17342d; }
 .citation-layout { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 80px; align-items: start; }
 .citation-layout .section-index { color: var(--mint); }
-.citation-layout h2 { margin: 14px 0 10px; font-family: "Iowan Old Style", Georgia, serif; font-size: clamp(2.2rem, 3.8vw, 3.8rem); font-weight: 560; letter-spacing: -0.04em; line-height: 1.05; }
+.citation-layout h2 { margin: 14px 0 10px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.2rem, 3.8vw, 3.8rem); font-weight: 600; letter-spacing: -0.04em; line-height: 1.05; }
 .citation-layout > div:first-child > p:last-child { color: #a6b7b1; font-size: 0.81rem; }
 .citation-card { position: relative; overflow: hidden; background: #0d251f; border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius-md); }
 .citation-card pre { margin: 0; padding: 55px 25px 25px; overflow-x: auto; color: #cde8de; font: 0.71rem/1.7 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-.copy-button { position: absolute; top: 12px; right: 12px; padding: 6px 9px; color: #c7d8d2; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 6px; font-size: 0.62rem; font-weight: 750; cursor: pointer; }
+.copy-button { position: absolute; top: 12px; right: 12px; padding: 6px 9px; color: #c7d8d2; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer; }
 .copy-button:hover { background: rgba(255,255,255,.12); }
 .copy-status { position: absolute; top: 15px; left: 25px; margin: 0; color: var(--mint); font-size: 0.61rem; }
 
